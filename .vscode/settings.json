@@ -6,5 +6,10 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "prettier.semi": false,
-  "prettier.useTabs": false
+  "prettier.useTabs": false,
+  "prettier.singleQuote": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "css.lint.unknownAtRules": "ignore"
 }
