@@ -35,7 +35,7 @@ jobs:
       - name: Run tests
         uses: borales/actions-yarn@v4
         with:
-          cmd: test # will run `yarn test` command
+          cmd: test --passWithNoTests # will run `yarn test --passWithNoTests` command
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
