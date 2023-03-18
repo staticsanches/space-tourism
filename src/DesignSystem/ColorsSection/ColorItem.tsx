@@ -1,6 +1,5 @@
 export type ColorItemProps = {
   className: string
-  whiteBorder?: boolean
   hexValue: string
   rgbValue: string
   hslValue: string
@@ -8,17 +7,16 @@ export type ColorItemProps = {
 
 export const ColorItem = ({
   className,
-  whiteBorder = false,
   hexValue,
   rgbValue,
   hslValue,
 }: ColorItemProps) => (
-  <div style={{ flexGrow: 1 }}>
+  <div className="flow" style={{ flexGrow: 1 }}>
     <div
       className={className}
       style={{
         padding: '3rem 1rem 1rem',
-        ...(whiteBorder && { border: '1px solid white' }),
+        border: '1px solid white',
       }}
     >
       {hexValue}

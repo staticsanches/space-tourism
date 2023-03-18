@@ -11,5 +11,6 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
-  "css.lint.unknownAtRules": "ignore"
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.validProperties": ["composes"]
 }

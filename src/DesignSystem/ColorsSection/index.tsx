@@ -1,10 +1,9 @@
+import { NumberedTitle } from '@/Typography'
 import { ColorItem } from './ColorItem'
 
 export const ColorsSection = () => (
-  <section id="colors" style={{ margin: '4rem 0' }}>
-    <h2 className="uppercase">
-      <span>01</span> Colors
-    </h2>
+  <section id="colors" className="flow" style={{ margin: '4rem 0' }}>
+    <NumberedTitle index="01">Colors</NumberedTitle>
 
     <div className="flex">
       <ColorItem
@@ -12,7 +11,6 @@ export const ColorsSection = () => (
         hexValue="#0B0D17"
         rgbValue="11, 13, 23"
         hslValue="230°, 35%, 7%"
-        whiteBorder
       />
       <ColorItem
         className="bg-accent text-dark"
