@@ -1,4 +1,5 @@
 import { ColorsSection } from './ColorsSection'
+import { InteractiveElements } from './InteractiveElements'
 import { TypographySection } from './TypographySection'
 
 export const DesignSystem = () => (
@@ -7,5 +8,6 @@ export const DesignSystem = () => (
 
     <ColorsSection />
     <TypographySection />
+    <InteractiveElements />
   </div>
 )

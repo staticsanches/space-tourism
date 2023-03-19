@@ -1,0 +1,32 @@
+.largeButton {
+  composes: uppercase from global;
+  composes: ff-serif from global;
+  composes: fs-600 from global;
+  composes: text-dark from global;
+  composes: bg-white from global;
+
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 0 2em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.largeButton::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: hsl(var(--clr-white) / 0.15);
+  opacity: 0;
+  transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.largeButton:hover::after {
+  opacity: 1;
+  transform: scale(1.5);
+}
