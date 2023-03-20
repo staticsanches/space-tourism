@@ -1,5 +1,3 @@
-import React from 'react'
-
 export type TypographyItemProps = {
   type: string
   children: React.ReactNode

@@ -11,7 +11,7 @@ import { TypographyItem } from './TypographyItem'
 
 export const TypographySection = () => (
   <section id="typography" className="flow" style={{ margin: '4rem 0' }}>
-    <NumberedTitle index="02">Typography</NumberedTitle>
+    <NumberedTitle number="02">Typography</NumberedTitle>
 
     <div className="flex">
       <div

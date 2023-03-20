@@ -1,7 +1,10 @@
-export type NavTextProps = {
-  children: React.ReactNode
-}
+export type NavTextProps = React.HTMLAttributes<HTMLParagraphElement>
 
-export const NavText = ({ children }: NavTextProps) => (
-  <p className="fs-300 uppercase ff-sans-cond letter-spacing-2">{children}</p>
+export const NavText = ({ className, ...otherProps }: NavTextProps) => (
+  <p
+    className={
+      'fs-300 uppercase ff-sans-cond letter-spacing-2 ' + (className ?? '')
+    }
+    {...otherProps}
+  />
 )

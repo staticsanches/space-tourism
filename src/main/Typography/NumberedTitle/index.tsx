@@ -1,13 +1,20 @@
 import classes from './NumberedTitle.module.scss'
 
-export type NumberedTitleProps = {
-  index: React.ReactNode
-  children: React.ReactNode
+export type NumberedTitleProps = React.HTMLAttributes<HTMLHeadingElement> & {
+  number: React.ReactNode
 }
 
-export const NumberedTitle = ({ index, children }: NumberedTitleProps) => (
-  <h2 className={classes.numberedTitle}>
-    <span>{index}</span>
+export const NumberedTitle = ({
+  number,
+  children,
+  className,
+  ...otherProps
+}: NumberedTitleProps) => (
+  <h2
+    className={classes.numberedTitle + ' ' + (className ?? '')}
+    {...otherProps}
+  >
+    <span>{number}</span>
     {children}
   </h2>
 )

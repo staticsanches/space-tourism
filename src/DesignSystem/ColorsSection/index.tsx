@@ -3,7 +3,7 @@ import { ColorItem } from './ColorItem'
 
 export const ColorsSection = () => (
   <section id="colors" className="flow" style={{ margin: '4rem 0' }}>
-    <NumberedTitle index="01">Colors</NumberedTitle>
+    <NumberedTitle number="01">Colors</NumberedTitle>
 
     <div className="flex">
       <ColorItem

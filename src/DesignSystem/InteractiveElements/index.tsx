@@ -4,7 +4,7 @@ import { NumberedTitle } from '@/Typography'
 
 export const InteractiveElements = () => (
   <section id="interactive-elements" className="flow">
-    <NumberedTitle index="03">Interactve Elements</NumberedTitle>
+    <NumberedTitle number="03">Interactve Elements</NumberedTitle>
 
     <div className="flex">
       {/* Explore buttons */}
