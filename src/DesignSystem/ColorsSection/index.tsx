@@ -1,9 +1,9 @@
-import { NumberedTitle } from '@/Typography'
+import { IndexedTitle } from '@/Typography'
 import { ColorItem } from './ColorItem'
 
 export const ColorsSection = () => (
   <section id="colors" className="flow" style={{ margin: '4rem 0' }}>
-    <NumberedTitle number="01">Colors</NumberedTitle>
+    <IndexedTitle index="01">Colors</IndexedTitle>
 
     <div className="flex">
       <ColorItem

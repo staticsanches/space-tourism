@@ -1,10 +1,10 @@
 import { LargeButton } from '@/components/LargeButton'
 import { LargeLink } from '@/components/LargeLink'
-import { NumberedTitle } from '@/Typography'
+import { IndexedTitle } from '@/Typography'
 
 export const InteractiveElements = () => (
   <section id="interactive-elements" className="flow">
-    <NumberedTitle number="03">Interactve Elements</NumberedTitle>
+    <IndexedTitle index="03">Interactve Elements</IndexedTitle>
 
     <div className="flex">
       {/* Explore buttons */}

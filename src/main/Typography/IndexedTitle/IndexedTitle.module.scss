@@ -1,11 +1,11 @@
-.numberedTitle {
+.indexedTitle {
   composes: ff-sans-cond from global;
   composes: fs-500 from global;
   composes: uppercase from global;
   composes: letter-spacing-1 from global;
 }
 
-.numberedTitle > span:nth-child(1) {
+.indexedTitle > span:nth-child(1) {
   margin-right: 0.5em;
   font-weight: 700;
   color: hsl(var(--clr-white) / 0.25);

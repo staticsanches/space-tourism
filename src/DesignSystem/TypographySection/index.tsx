@@ -4,14 +4,14 @@ import {
   Heading3,
   Heading4,
   Heading5,
+  IndexedTitle,
   NavText,
-  NumberedTitle,
 } from '@/Typography'
 import { TypographyItem } from './TypographyItem'
 
 export const TypographySection = () => (
   <section id="typography" className="flow" style={{ margin: '4rem 0' }}>
-    <NumberedTitle number="02">Typography</NumberedTitle>
+    <IndexedTitle index="02">Typography</IndexedTitle>
 
     <div className="flex">
       <div
