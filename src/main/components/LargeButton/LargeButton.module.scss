@@ -1,7 +1,6 @@
 .largeButton {
   composes: uppercase from global;
   composes: ff-serif from global;
-  composes: fs-600 from global;
   composes: text-dark from global;
   composes: bg-white from global;
 
@@ -12,6 +11,7 @@
   padding: 0 2em;
   border-radius: 50%;
   aspect-ratio: 1;
+  font-size: 2rem;
 }
 
 .largeButton::after {

@@ -11,12 +11,12 @@
   --clr-white: 0 0% 100%;
 
   /* Font Sizes */
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
   --fs-500: 1.75rem;
-  --fs-400: 1.125rem;
+  --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
 
@@ -24,6 +24,25 @@
   --ff-serif: 'Bellefair', serif;
   --ff-sans-cond: 'Barlow Condensed', sans-serif;
   --ff-sans-normal: 'Barlow', sans-serif;
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+    /* font-sizes */
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-400: 1.125rem;
+  }
 }
 
 /* --------------------- */
@@ -69,14 +88,17 @@ p {
   font-weight: 400;
 }
 
-/* Set up the body */
-body {
+/* Set up the react-root div that acts as the body */
+div#react-root {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
   color: hsl(var(--clr-white));
   background-color: hsl(var(--clr-dark));
   line-height: 1.5;
   min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 /* Make images easier to work with */
@@ -143,6 +165,33 @@ button {
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 80rem;
+}
+
+.grid-container {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+}
+
+.grid-container * {
+  max-width: 50ch;
+}
+
+@media (min-width: 45em) {
+  .grid-container {
+    text-align: left;
+    column-gap: var(--grid-container-gap, 2rem);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
+  }
+
+  .grid-container > *:first-child {
+    grid-column: 2;
+  }
+
+  .grid-container > *:last-child {
+    grid-column: 3;
+  }
 }
 
 .sr-only {
@@ -260,4 +309,13 @@ button {
 .underline-indicators > *:has(.active) {
   color: hsl(var(--clr-white) / 1);
   border-color: hsl(var(--clr-white) / 1);
+}
+
+/* --------------------- */
+/* Backgrounds           */
+/* --------------------- */
+
+div#react-root {
+  background-size: cover;
+  background-position: bottom center;
 }

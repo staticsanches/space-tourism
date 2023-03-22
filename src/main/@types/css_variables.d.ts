@@ -22,6 +22,7 @@ declare module 'csstype' {
     '--ff-sans-normal'?: string
 
     '--gap'?: string
+    '--grid-container-gap'?: string
 
     '--flow-space'?: string
   }

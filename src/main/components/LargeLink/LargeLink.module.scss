@@ -1,7 +1,6 @@
 .largeLink {
   composes: uppercase from global;
   composes: ff-serif from global;
-  composes: fs-600 from global;
   composes: text-dark from global;
   composes: bg-white from global;
 
@@ -13,6 +12,7 @@
   border-radius: 50%;
   aspect-ratio: 1;
   text-decoration: none;
+  font-size: 2rem;
 }
 
 .largeLink::after {

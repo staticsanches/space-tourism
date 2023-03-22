@@ -12,5 +12,6 @@
     "source.organizeImports": true
   },
   "css.lint.unknownAtRules": "ignore",
-  "scss.lint.validProperties": ["composes"]
+  "scss.lint.validProperties": ["composes"],
+  "prettier.printWidth": 120
 }
