@@ -1,22 +1,21 @@
+import { App } from '@/App'
+import { DesignSystem } from '@/pages/DesignSystem'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createHashRouter, RouterProvider } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 
-import { DesignSystem } from './DesignSystem'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
-
-const router = createHashRouter([
-  {
-    path: '/',
-    element: <DesignSystem />,
-  },
-])
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <HashRouter>
+      <Routes>
+        <Route path="/*" element={<App />} />
+        <Route path="design-system" element={<DesignSystem />} />
+      </Routes>
+    </HashRouter>
   </React.StrictMode>
 )
 

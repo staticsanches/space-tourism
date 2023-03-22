@@ -1,0 +1,21 @@
+.appNavigation {
+  --gap: 8rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.appNavigationItem {
+  composes: ff-sans-cond from global;
+  composes: uppercase from global;
+  composes: letter-spacing-2 from global;
+  composes: text-white from global;
+
+  text-decoration: none;
+}
+
+.appNavigationItem > span:first-child {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
