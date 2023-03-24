@@ -1,9 +1,69 @@
+.appHeader {
+  composes: flex from global;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
 .appNavigation {
-  --gap: 8rem;
+  composes: underline-indicators from global;
+  composes: flex from global;
+
+  --gap: clamp(1.5rem, 6vw, 3.5rem);
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
+  background: hsl(var(--clr-dark) / 0.95);
+}
+
+@supports (backdrop-filter: blur(1.5rem)) {
+  .appNavigation {
+    background: hsl(var(--clr-white) / 0.05);
+    backdrop-filter: blur(1.5rem);
+  }
+}
+
+.mobileNavToggle {
+  display: none;
+}
+
+@media (max-width: 35em) {
+  .appNavigation {
+    --underline-gap: 0.6rem;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    padding: min(20rem, 15vh) 2rem;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+  }
+
+  .appNavigation[data-visible='true'] {
+    transform: translateX(0);
+  }
+
+  .appNavigation:global(.underline-indicators) > * {
+    border: 0;
+  }
+
+  .mobileNavToggle {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    right: 1rem;
+    top: 1rem;
+    background-image: url(../../assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.5rem;
+    aspect-ratio: 1;
+  }
+
+  .mobileNavToggle[aria-expanded='true'] {
+    background-image: url(../../assets/shared/icon-close.svg);
+  }
 }
 
 .appNavigationItem {
@@ -18,4 +78,45 @@
 .appNavigationItem > span:first-child {
   font-weight: 700;
   margin-right: 0.5em;
+}
+
+.logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+@media (min-width: 35em) {
+  .appNavigation {
+    padding-inline: clamp(3rem, 7vw, 7rem);
+  }
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+  .appNavigation {
+    padding-inline: 3rem;
+  }
+
+  .appNavigationItem > span:first-child {
+    display: none;
+  }
+}
+
+@media (min-width: 45em) {
+  .appHeader::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin-right: -2.5rem;
+    background: hsl(var(--clr-white) / 0.25);
+    order: 1;
+  }
+
+  .appHeader > nav {
+    order: 2;
+  }
+
+  .appNavigation {
+    margin-block: 2rem;
+  }
 }

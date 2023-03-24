@@ -11,7 +11,7 @@ export const HomePage = () => {
   }, [])
 
   return (
-    <div className={classes.homeContainer}>
+    <main className={classes.homeContainer}>
       <div>
         <h1 className={classes.title}>
           So, you want to travel to <span className="fs-900 ff-serif text-white">Space</span>
@@ -26,6 +26,6 @@ export const HomePage = () => {
       <div>
         <LargeLink to="/destination">Explore</LargeLink>
       </div>
-    </div>
+    </main>
   )
 }

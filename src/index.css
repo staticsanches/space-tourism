@@ -50,8 +50,8 @@
 /* --------------------- */
 
 @import url(https://fonts.googleapis.com/css?family=Bellefair);
-@import url(https://fonts.googleapis.com/css?family=Barlow+Condensed);
-@import url(https://fonts.googleapis.com/css?family=Barlow);
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700);
+@import url(https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap);
 
 /* --------------------- */
 /* Resets                */
@@ -99,6 +99,7 @@ div#react-root {
 
   display: grid;
   grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
 }
 
 /* Make images easier to work with */
