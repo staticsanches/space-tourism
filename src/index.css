@@ -89,6 +89,7 @@ p {
 }
 
 /* Set up the react-root div that acts as the body */
+body,
 div#react-root {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
