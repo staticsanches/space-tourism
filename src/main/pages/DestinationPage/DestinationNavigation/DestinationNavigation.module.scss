@@ -1,0 +1,25 @@
+.destinationNavigation {
+  composes: underline-indicators from global;
+  composes: flex from global;
+
+  --gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.destinationNavigationItem {
+  composes: uppercase from global;
+  composes: ff-sans-cond from global;
+  composes: text-accent from global;
+  composes: bg-dark from global;
+  composes: letter-spacing-2 from global;
+
+  text-decoration: none;
+}
+
+.destinationNavigationItemActive {
+  composes: destinationNavigationItem;
+  composes: active from global;
+  composes: text-white from global;
+}

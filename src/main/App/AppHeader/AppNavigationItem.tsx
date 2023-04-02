@@ -10,7 +10,10 @@ export type AppNavigationItemProps = {
 
 export const AppNavigationItem = ({ to, index, label }: AppNavigationItemProps) => (
   <li>
-    <NavLink to={to} className={({ isActive }) => classes.appNavigationItem + (isActive ? ' active' : '')}>
+    <NavLink
+      to={to}
+      className={({ isActive }) => (isActive ? classes.appNavigationItemActive : classes.appNavigationItem)}
+    >
       <span aria-hidden="true">{index}</span>
       {label}
     </NavLink>

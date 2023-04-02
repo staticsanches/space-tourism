@@ -24,7 +24,7 @@ export const AppNavigation = () => {
           <AppNavigationItem to="" index="00" label="Home" />
           <AppNavigationItem to="destination" index="01" label="Destination" />
           <AppNavigationItem to="crew" index="02" label="Crew" />
-          <AppNavigationItem to="technology" index="03" label="Tecnology" />
+          <AppNavigationItem to="technology" index="03" label="Technology" />
         </ul>
       </nav>
     </>

@@ -75,6 +75,11 @@
   text-decoration: none;
 }
 
+.appNavigationItemActive {
+  composes: appNavigationItem;
+  composes: active from global;
+}
+
 .appNavigationItem > span:first-child {
   font-weight: 700;
   margin-right: 0.5em;
